@@ -35,7 +35,7 @@ public class Service {
     }
 
     public List<ResponseDto> getSchedulelist() {
-        return  repository.findAll().stream().sorted(Comparator.comparing(Schedule::getDate)).map(ResponseDto::new).toList();
+        return  repository.findAll().stream().sorted(Comparator.comparing(Schedule::getCreatedAt)).map(ResponseDto::new).toList();
 
 
     }
